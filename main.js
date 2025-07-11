@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
   applyDepth();
 });
 
-// Google Maps initialization
+// Leaflet map initialization
 function initMap() {
-
-  const storeLocation = { lat: 38.433157829438755, lng: 27.142857499404936 };
-  const map = new google.maps.Map(document.getElementById('map'), {
-    center: storeLocation,
-    zoom: 15
-  });
-  new google.maps.Marker({
-    position: storeLocation,
-    map: map
-  });
+  // Store coordinates
+  const storeLatLng = [38.433157829438755, 27.142857499404936];
+  // Create map
+  const map = L.map('map').setView(storeLatLng, 15);
+  // Add OpenStreetMap tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  // Add marker
+  L.marker(storeLatLng).addTo(map);
 }
