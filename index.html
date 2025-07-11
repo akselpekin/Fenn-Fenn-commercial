@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenn Fenn</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { margin: 0; font-family: 'IBM Plex Sans', sans-serif; color: #333; background-color: #004080; }
+        header, footer { background-color: #004080; color: #fff; text-align: center; padding: 1em; }
+        main { max-width: 1300px; margin: auto; background-color: #fff; }
+        section { padding: 60px 20px; text-align: center; }
+        .landing { background: url('Assets/shop.jpeg') no-repeat center center; background-size: cover; color: #fff; height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+        .landing h1 { font-size: 3em; padding: 0.5em 1em; }
+        .about { display: flex; align-items: center; justify-content: center; gap: 40px; text-align: left; }
+        .about img { max-width: 300px; border-radius: 50%; margin-top: 20px; margin-bottom: 20px; border: 5px solid #004080; }
+        .about p { max-width: 600px; margin: 0; }
+        /* Carousel */
+        .carousel-container { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; perspective: 1000px; padding: 40px 0; scrollbar-width: none; -ms-overflow-style: none; }
+        .carousel-container img { flex: 0 0 300px; height: 200px; object-fit: cover; margin: 0 20px; scroll-snap-align: center; transition: transform 0.3s; }
+        .carousel-container::-webkit-scrollbar { display: none; }
+        #map { width: 100%; height: 400px; }
+        #location { display: flex; gap: 40px; justify-content: center; align-items: flex-start; text-align: left; padding: 60px 20px; }
+        #location #map { flex: 1; }
+        .contact-info { flex: 1; max-width: 400px; }
+        .contact-info h3 { margin-top: 0; color: #004080; }
+        .social-links { margin-top: 20px; }
+        .social-links a { margin-right: 10px; color: #004080; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; }
+        .social-links a i { margin-right: 5px; }
+        .carousel h2 { color: #004080; }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Fenn Fenn</h2>
+    </header>
+    <main>
+        <section class="landing">
+            <h1>Welcome to Fenn Fenn</h1>
+        </section>
+        <section class="about">
+            <img src="Assets/personal.jpeg" alt="Owner">
+            <p>With 40 years of expertise, I specialize in uniting Earth's finest gems with their illustrious wearers.</p>
+        </section>
+        <section class="carousel">
+            <h2>Gallery</h2>
+            <div class="carousel-container" id="carousel-container">
+                <img src="Assets/j_1.jpeg" alt="Item 1">
+                <img src="Assets/j_2.jpeg" alt="Item 2">
+                <img src="Assets/j_3.jpeg" alt="Item 3">
+                <img src="Assets/j_4.jpeg" alt="Item 4">
+                <img src="Assets/j_5.jpeg" alt="Item 5">
+                <img src="Assets/j_6.jpeg" alt="Item 6">
+                <img src="Assets/j_7.jpeg" alt="Item 7">
+                <img src="Assets/j_8.jpeg" alt="Item 8">
+            </div>
+        </section>
+        <section id="location">
+            <div id="map"></div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Phone: +90 232 441 8376</p>
+                <p>Email: hpfennfenn@outlook.com</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/fennfenn.hp/"><i class="fab fa-instagram"></i>Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Fenn Fenn. All rights reserved.</p>
+        <p style="margin-top: 0.5em; font-size: 0.9em; color: #eee;">Powered by Aksel Pekin</p>
+    </footer>
+    <script src="main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDSWpdleaCA8oCYS9IIzX--e9F9xgwdPw&callback=initMap"></script>
+</body>
+</html>
